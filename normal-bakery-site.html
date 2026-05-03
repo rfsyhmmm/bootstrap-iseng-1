@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rusdy Bakery</title>
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <style>
       .carousel-item img {
@@ -125,9 +125,17 @@
       const txtid = document.getElementById("text");
       const btnid = document.getElementById("btn-surprise");
       const gameSection = document.getElementById("Game");
+
       btnid.addEventListener("click", function () {
+        const containerFluid = document.querySelector(".container-fluid");
         btnid.style.display = "none";
-        txtid.innerHTML = '<img src="./assets/download (6).jpeg" class="d-block" style="height: 100vh; width:100%; object-fit: cover;">';
+        containerFluid.classList.remove("p-5");
+        containerFluid.classList.remove("p-0");
+        gameSection.style.padding = "0";
+
+        txtid.style.margin = "0";
+        txtid.style.margin = "0";
+        txtid.innerHTML = '<img src="./assets/download (6).jpeg" class="d-block border-0 object-fit-fill m-0 p-0" style="height: 100vh; width:100vw">';
         gameSection.style.minHeight = "100vh";
         gameSection.scrollIntoView({ behavior: "instant", block: "start" });
       });
